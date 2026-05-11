@@ -2,6 +2,7 @@ import 'package:artriapp/utils/enums/index.dart';
 import 'package:artriapp/utils/helpers/index.dart';
 import 'package:artriapp/utils/index.dart';
 import 'package:artriapp/view_models/index.dart';
+import 'package:artriapp/views/physical_exercise/widgets/index.dart';
 import 'package:artriapp/views/widgets/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,16 +10,6 @@ import 'package:provider/provider.dart';
 
 class LevelExerciseSelector extends StatelessWidget {
   const LevelExerciseSelector({super.key});
-
-  static const whichLevelDialog = SimpleDialog(
-    title: Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Icon(Icons.priority_high),
-        Text('ATENÇÃO'),
-      ],
-    ),
-  );
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +64,7 @@ class LevelExerciseSelector extends StatelessWidget {
             CustomSolidButton(
               onPressed: () => showDialog(
                 context: context,
-                builder: (context) => whichLevelDialog,
+                builder: (context) => LevelSelectorDialog(),
               ),
               text: 'Qual devo escolher?',
               color: AppColors.lightBrown,
