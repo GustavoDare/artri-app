@@ -1,3 +1,4 @@
+import 'package:artriapp/models/api_responses/index.dart';
 import 'package:artriapp/utils/enums/exercise_difficulty.dart';
 
 class Exercise {
@@ -6,6 +7,7 @@ class Exercise {
   final String description;
   final String link;
   final ExerciseDifficulty difficulty;
+  final ExerciseDetails details;
 
   Exercise({
     required this.id,
@@ -13,6 +15,7 @@ class Exercise {
     required this.description,
     required this.link,
     required this.difficulty,
+    required this.details,
   });
 
   Map<String, dynamic> toMap() {
@@ -32,19 +35,7 @@ class Exercise {
       description: map['description'],
       link: map['tutorial_link'],
       difficulty: ExerciseDifficulty.fromString(map['difficulty']),
+      details: ExerciseDetails.fromString(map['description']),
     );
-  }
-
-  static ExerciseDifficulty _parseDifficulty(String value) {
-    switch (value.toLowerCase()) {
-      case 'easy':
-        return ExerciseDifficulty.easy;
-      case 'medium':
-        return ExerciseDifficulty.medium;
-      case 'hard':
-        return ExerciseDifficulty.hard;
-      default:
-        return ExerciseDifficulty.easy;
-    }
   }
 }

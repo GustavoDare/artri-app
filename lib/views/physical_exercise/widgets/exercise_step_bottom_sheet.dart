@@ -69,9 +69,7 @@ class ExerciseStepBottomSheet extends StatelessWidget {
                   iconSize: 52,
                   disabledColor: Colors.transparent,
                   color: AppColors.darkGreen,
-                  onPressed: hasNext && isCompleted
-                      ? () => viewModel.handleNextExercise(context)
-                      : null,
+                  onPressed: () => viewModel.handleNextExercise(context),
                   icon: const Icon(
                     Icons.arrow_circle_right_outlined,
                   ),

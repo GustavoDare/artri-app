@@ -7,3 +7,4 @@ export 'remedy.dart';
 export 'training_report.dart';
 export 'training.dart';
 export 'user_registration.dart';
+export 'exercise_details.dart';

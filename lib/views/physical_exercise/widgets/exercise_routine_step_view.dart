@@ -1,6 +1,5 @@
 import 'package:artriapp/view_models/index.dart';
 import 'package:artriapp/views/index.dart';
-import 'package:artriapp/views/physical_exercise/widgets/index.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -29,8 +28,12 @@ class ExerciseRoutineStepView extends StatelessWidget {
           children: [
             YoutubePlayer(controller: videoController),
             SessionTitle(title: exercise.name.split('-').first.trim()),
-            ExerciseSetProperties(),
-            ExerciseSetDetails(),
+            ExerciseSetProperties(
+              details: exercise.details,
+            ),
+            ExerciseSetDetails(
+              details: exercise.details,
+            ),
           ],
         );
       },

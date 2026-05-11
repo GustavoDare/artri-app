@@ -15,6 +15,7 @@ class ExerciseQueued extends Exercise {
           description: exercise.description,
           link: exercise.link,
           difficulty: exercise.difficulty,
+          details: exercise.details,
         );
 
   void markAsCompleted() {
