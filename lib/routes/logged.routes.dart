@@ -1,12 +1,14 @@
 import 'package:artriapp/models/index.dart';
 import 'package:artriapp/routes/index.dart';
 import 'package:artriapp/views/index.dart';
+import 'package:artriapp/views/remedy/remedy_page.dart';
 import 'package:go_router/go_router.dart';
 
 class LoggedRoutes implements RoutesSession {
   static const String diary = '/diary';
   static const String exercise = '/exercise';
   static const String info = '/info';
+  static const String remedy = '/remedy';
   static const String evolution = '/evolution';
 
   static List<RouteBase> getGoRoutes() => [
@@ -29,6 +31,10 @@ class LoggedRoutes implements RoutesSession {
             GoRoute(
               path: info,
               builder: (context, state) => const InfoPage(),
+            ),
+            GoRoute(
+              path: remedy,
+              builder: (context, state) => const RemedyPage(),
             ),
             GoRoute(
               path: evolution,
