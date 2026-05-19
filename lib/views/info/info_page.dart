@@ -108,7 +108,45 @@ class InfoPage extends StatelessWidget {
           ),
           const Gap(16),
           ElevatedButton(
-            onPressed: () => context.go(AppRoutes.lawsInfoPage),
+            onPressed: () => context.push('/info/emocional'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Color(0xFF03A64A),
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              fixedSize: const Size(300, 50),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+            ),
+            child: const Text(
+              'Emocional',
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          const Gap(16),
+          ElevatedButton(
+            onPressed: () => context.push('/info/exercicio'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Color(0xFF03A64A),
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              fixedSize: const Size(300, 50),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+            ),
+            child: const Text(
+              'Exercício físico',
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          const Gap(16),
+          ElevatedButton(
+            onPressed: () => context.push('/info/leis'),
             style: ElevatedButton.styleFrom(
               backgroundColor: Color(0xFF03A64A),
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
@@ -119,6 +157,25 @@ class InfoPage extends StatelessWidget {
             ),
             child: const Text(
               'Leis e Direitos',
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          const Gap(16),
+          ElevatedButton(
+            onPressed: () => context.push('/info/mitos-verdades'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Color(0xFF03A64A),
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              fixedSize: const Size(300, 50),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+            ),
+            child: const Text(
+              'Mitos e Verdades',
               style: TextStyle(
                 fontSize: 24,
                 color: Colors.white,
