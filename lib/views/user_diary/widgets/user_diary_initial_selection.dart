@@ -1,6 +1,3 @@
-import 'dart:async';
-import 'dart:developer';
-
 import 'package:artriapp/routes/index.dart';
 import 'package:artriapp/utils/helpers/index.dart';
 import 'package:artriapp/utils/helpers/myths_helper.dart';
@@ -84,6 +81,8 @@ class UserDiaryInitialSelection extends StatelessWidget {
         const Gap(32),
         QuestionCard(
           question: currentMyth.question,
+          onVerify: () => context.go(InfoRoutes.mythsTruthsInfoPage),
+          onDeny: () => context.go(InfoRoutes.mythsTruthsInfoPage),
         ),
       ],
     );

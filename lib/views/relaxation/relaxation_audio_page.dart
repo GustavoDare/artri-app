@@ -6,7 +6,6 @@ import 'package:artriapp/views/widgets/video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class RelaxationAudioPage extends StatelessWidget {
   final Exercise exercise;
 
@@ -29,7 +28,7 @@ class RelaxationAudioPage extends StatelessWidget {
 
           // 🎬 PLAYER REUTILIZÁVEL
           VideoPlayerWidget(
-            videoUrl: exercise.link,
+            videoUrl: exercise.tutorialLink,
           ),
 
           Text(

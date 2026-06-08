@@ -41,7 +41,9 @@ class ExerciseSetProperties extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Repetições: ${details.reps ?? '${details.duration}s'}',
+                    details.reps != null
+                        ? 'Repetições: ${details.reps}'
+                        : 'Duração: ${details.duration}s',
                     style: GoogleFonts.montserrat(
                       fontSize: 20,
                       color: AppColors.darkGreen,
@@ -59,7 +61,7 @@ class ExerciseSetProperties extends StatelessWidget {
                 spacing: 4,
                 children: [
                   Text(
-                    'Descanso: ${details.rest == null ? '--' : '${details.rest}s'}',
+                    'Descanso: ${details.rest == null ? '-' : '${details.rest}s'}',
                     style: GoogleFonts.montserrat(
                       fontSize: 20,
                       color: AppColors.darkGreen,

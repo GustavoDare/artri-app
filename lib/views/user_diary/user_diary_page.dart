@@ -1,6 +1,10 @@
+import 'dart:math';
+
 import 'package:artriapp/routes/index.dart';
+import 'package:artriapp/utils/helpers/index.dart';
 import 'package:artriapp/utils/index.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,6 +17,7 @@ class UserDiaryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final String location = GoRouterState.of(context).uri.toString();
     final bool isSetting = location == UserDiaryRoutes.settings;
+    final double screenWidth = ScreenHelper.getScreenWidth(context);
 
     return Stack(
       fit: StackFit.expand,
@@ -21,22 +26,13 @@ class UserDiaryPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              width: 120,
-              height: 120,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(100),
-                color: AppColors.darkGreen,
-              ),
-              child: const Icon(
-                Icons.person,
-                color: Colors.white,
-                size: 80,
-              ),
+            SvgPicture.asset(
+              'assets/images/logo-ArtriApp-v2.svg',
+              width: min(180, screenWidth * 0.50),
             ),
             const Gap(24),
             Text(
-              'Olá, {nome}!',
+              'Olá!',
               style: GoogleFonts.montserrat(
                 fontSize: 28,
                 color: const Color(0xff026873),

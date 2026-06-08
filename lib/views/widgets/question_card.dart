@@ -4,8 +4,8 @@ class QuestionCard extends StatelessWidget {
   final String question;
   // final String answer;
   // final VoidCallback onPressed;
-  // final VoidCallback onVerify;
-  // final VoidCallback onDeny;
+  final VoidCallback? onVerify;
+  final VoidCallback? onDeny;
   final IconData leadingIcon;
 
   const QuestionCard({
@@ -13,8 +13,8 @@ class QuestionCard extends StatelessWidget {
     required this.question,
     // required this.answer,
     // required this.onPressed,
-    // required this.onVerify,
-    // required this.onDeny,
+    this.onVerify,
+    this.onDeny,
     this.leadingIcon = Icons.help_outline, // Default leading icon
   });
 
@@ -74,7 +74,7 @@ class QuestionCard extends StatelessWidget {
                             color: Colors.green[700],
                             size: 28,
                           ),
-                          onPressed: () {},
+                          onPressed: onVerify,
                         ),
                         IconButton(
                           icon: Icon(
@@ -82,7 +82,7 @@ class QuestionCard extends StatelessWidget {
                             color: Colors.red[700],
                             size: 28,
                           ),
-                          onPressed: () {},
+                          onPressed: onDeny,
                         ),
                       ],
                     ),

@@ -13,7 +13,7 @@ class ExerciseQueued extends Exercise {
           id: exercise.id,
           name: exercise.name,
           description: exercise.description,
-          link: exercise.link,
+          tutorialLink: exercise.tutorialLink,
           difficulty: exercise.difficulty,
           details: exercise.details,
         );
