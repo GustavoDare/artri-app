@@ -7,19 +7,11 @@ import 'package:go_router/go_router.dart';
 
 class QuestionCard extends StatelessWidget {
   final Myth myth;
-  // final String answer;
-  // final VoidCallback onPressed;
-  // final VoidCallback onVerify;
-  // final VoidCallback onDeny;
   final IconData leadingIcon;
 
   const QuestionCard({
     super.key,
     required this.myth,
-    // required this.answer,
-    // required this.onPressed,
-    // required this.onVerify,
-    // required this.onDeny,
     this.leadingIcon = Icons.help_outline, // Default leading icon
   });
 
@@ -131,10 +123,7 @@ class QuestionCard extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {
-                          final router = GoRouter.of(context);
-
                           Navigator.pop(context);
-
                           context.push(
                             InfoRoutes.mythsTruthsInfoPage,
                             extra: myth,

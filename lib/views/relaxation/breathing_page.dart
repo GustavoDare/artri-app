@@ -141,7 +141,7 @@ class _BreathingTechniquesPageState extends State<BreathingTechniquesPage> {
                       // return a list of relaxation tiles with the exercise name and video link
                       return RelaxationTile(
                         title: exercise.name,
-                        videoUrl: exercise.link,
+                        videoUrl: exercise.tutorialLink,
                         onTap: () => context.go(
                           '${RelaxationRoutes.breathingTechniques}/audio',
                           extra: exercise,

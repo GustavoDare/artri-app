@@ -32,7 +32,7 @@ class PhysicalExercisesViewModel extends ChangeNotifier {
     switch (type) {
       case TrainingType.hands:
         return PhysicalExerciseRoutes.handExercises;
-      case TrainingType.feetBoost:
+      case TrainingType.feet:
         return PhysicalExerciseRoutes.feetExercises;
       default:
         return PhysicalExerciseRoutes.customExercises;

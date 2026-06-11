@@ -1,6 +1,3 @@
-import 'dart:async';
-import 'dart:developer';
-
 import 'package:artriapp/routes/index.dart';
 import 'package:artriapp/utils/helpers/index.dart';
 import 'package:artriapp/utils/helpers/myths_helper.dart';

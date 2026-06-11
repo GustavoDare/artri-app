@@ -15,7 +15,7 @@ class ExerciseRoutineStepView extends StatelessWidget {
 
         var videoController = YoutubePlayerController(
           initialVideoId: YoutubePlayer.convertUrlToId(
-                exercise!.link,
+                exercise!.tutorialLink,
               ) ??
               'IxX_QHay02M',
           flags: const YoutubePlayerFlags(
@@ -32,7 +32,7 @@ class ExerciseRoutineStepView extends StatelessWidget {
               details: exercise.details,
             ),
             ExerciseSetDetails(
-              details: exercise.details,
+              exerciseDescription: exercise.description,
             ),
           ],
         );

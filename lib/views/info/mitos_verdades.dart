@@ -52,7 +52,7 @@ class MitosVerdadesInfoPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: const Text(
-                '⭐ Mito Verdade em destaque! ⭐',
+                '⭐ Mito/Verdade em destaque! ⭐',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),

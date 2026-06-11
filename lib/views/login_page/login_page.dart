@@ -39,12 +39,13 @@ class LoginPage extends StatelessWidget {
                 children: <Widget>[
                   ConstrainedBox(
                     constraints: BoxConstraints(
-                      maxWidth: screenSize.width * 0.8,
+                      maxWidth: screenSize.width * 0.80,
                     ),
                     child: Column(
                       children: [
                         SvgPicture.asset(
                           'assets/images/logo-ArtriApp-v2.svg',
+                          width: screenSize.width * 0.60,
                         ),
                         InputText(
                           placeholder: 'Usuário',

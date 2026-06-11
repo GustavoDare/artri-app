@@ -34,7 +34,7 @@ class PhysicalExerciseHome extends StatelessWidget {
               ),
               ExerciseButton(
                 onClick: () => viewModel.handleTrainingTypeSelection(
-                  TrainingType.feetBoost,
+                  TrainingType.feet,
                   context,
                 ),
                 gradientColors: AppGradients.greenToNeutral,

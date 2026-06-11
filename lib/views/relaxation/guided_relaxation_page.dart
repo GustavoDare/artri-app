@@ -152,7 +152,7 @@ class _GuidedRelaxationPageState extends State<GuidedRelaxationPage> {
                       // return a list of relaxation tiles with the exercise name and video link
                       return RelaxationTile(
                         title: exercise.name,
-                        videoUrl: exercise.link,
+                        videoUrl: exercise.tutorialLink,
                         onTap: () => context.go(
                           '${RelaxationRoutes.guidedRelaxation}/audio',
                           extra: exercise,
