@@ -2,6 +2,10 @@
 
 Um app para artrite reumatoide.
 
+## Integrantes do Grupo
+
+* Gustavo Borguetti Daré (RA: 818723)
+
 ## Table of contents
 
 - [Getting started](#getting-started)
