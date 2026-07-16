@@ -25,19 +25,25 @@ class PhysicalExercisesService {
   }
 
   Future<List<Exercise>> getExercisesFromTraining(
-    TrainingType type,
-    ExerciseDifficulty difficulty,
-  ) async {
+      TrainingType type,
+      ExerciseDifficulty difficulty,
+      ) async {
+    // Se for 'custom', retornamos todos os exercícios para o usuário selecionar
+    if (type == TrainingType.custom) {
+      return await getExercises();
+    }
+
+    // Fluxo original para 'hands' e 'feet'
     final training = await getTrainings().then(
-      (trainings) => trainings.firstWhere(
-        (training) =>
-            training.name.startsWith(type.toString()) &&
+          (trainings) => trainings.firstWhere(
+            (training) =>
+        training.name.startsWith(type.toString()) &&
             training.difficulty == difficulty,
       ),
     );
 
     return await getExercises().then(
-      (exercises) =>
+          (exercises) =>
           exercises.where((e) => training.exercises.contains(e.id)).toList(),
     );
   }

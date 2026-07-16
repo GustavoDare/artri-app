@@ -6,6 +6,8 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
+import '../../../utils/helpers/screen_helper.dart';
+
 class PhysicalExerciseHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class PhysicalExerciseHome extends StatelessWidget {
                 'Aqui você terá acesso a exercícios específicos e pré-determinados para suas mãos e pés. Clique para escolher o nível de dificuldade:',
                 style: GoogleFonts.montserrat(
                   textStyle: const TextStyle(
-                    fontSize: 24,
+                    fontSize: 20,
                     color: AppColors.darkGreen,
                   ),
                 ),
@@ -40,22 +42,24 @@ class PhysicalExerciseHome extends StatelessWidget {
                 gradientColors: AppGradients.greenToNeutral,
                 buttonText: 'Pés',
               ),
-              // Text(
-              //   'Aqui você terá acesso a exercícios personalizados para diferentes partes do corpo. Clique para escolher o nível de dificuldade e personalizar seus exercícios:',
-              //   style: GoogleFonts.montserrat(
-              //     textStyle: const TextStyle(
-              //       fontSize: 24,
-              //       color: AppColors.darkGreen,
-              //     ),
-              //   ),
-              // ),
-              // ExerciseButton(
-              //   onClick: () =>
-              //       context.go(PhysicalExerciseRoutes.customExercises),
-              //   gradientColors: AppGradients.greenToNeutral,
-              //   buttonText: 'Personalizados',
-              //   width: ScreenHelper.getScreenWidth(context) * 0.65,
-              // ),
+              Text(
+                'Aqui você terá acesso a exercícios personalizados para diferentes partes do corpo. Clique para escolher o nível de dificuldade e personalizar seus exercícios:',
+                style: GoogleFonts.montserrat(
+                  textStyle: const TextStyle(
+                    fontSize: 20,
+                    color: AppColors.darkGreen,
+                  ),
+                ),
+              ),
+              ExerciseButton(
+                onClick: () => viewModel.handleTrainingTypeSelection(
+                  TrainingType.custom,
+                  context,
+                ),
+                gradientColors: AppGradients.greenToNeutral,
+                buttonText: 'Exercícios\npersonalizados',
+                width: ScreenHelper.getScreenWidth(context) * 0.85,
+              ),
             ],
           ),
         );

@@ -1,33 +1,31 @@
-import 'package:artriapp/utils/enums/days_of_week.dart';
-
 class Remedy {
   final int id;
   final String name;
-  final String description;
-  final int quantity;
-  final List<DaysOfWeek> daysOfWeek;
+  final String dosage;
   final String hour;
-  final int user;
+  final List<int> daysOfWeek;
+  final int? reminderMinutes;
+  final int userId; // Campo adicionado para separar por usuário
 
   Remedy({
     required this.id,
     required this.name,
-    required this.description,
-    required this.quantity,
-    required this.daysOfWeek,
+    required this.dosage,
     required this.hour,
-    required this.user,
+    required this.daysOfWeek,
+    this.reminderMinutes,
+    required this.userId,
   });
 
   Map<String, dynamic> toMap() {
     return {
       'id': id,
       'name': name,
-      'description': description,
-      'quantity': quantity,
-      'days_of_week': daysOfWeek.map((day) => day.index).toList(),
+      'dosage': dosage,
       'hour': hour,
-      'user': user,
+      'days_of_week': daysOfWeek,
+      'reminder_minutes': reminderMinutes,
+      'user_id': userId,
     };
   }
 
@@ -35,13 +33,11 @@ class Remedy {
     return Remedy(
       id: map['id'],
       name: map['name'],
-      description: map['description'],
-      quantity: map['quantity'],
-      daysOfWeek: List<DaysOfWeek>.from(
-        (map['days_of_week'] as List).map((day) => DaysOfWeek.values[day]),
-      ),
-      hour: map['hour'],
-      user: map['user'],
+      dosage: map['dosage'] ?? '',
+      hour: map['hour'] ?? '',
+      daysOfWeek: List<int>.from(map['days_of_week'] ?? []),
+      reminderMinutes: map['reminder_minutes'],
+      userId: map['user_id'] ?? 0,
     );
   }
 }

@@ -56,7 +56,7 @@ class ExercisePage extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: Color(0xFF03A64A),
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-              fixedSize: const Size(300, 80),
+              fixedSize: const Size(300, 100),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),

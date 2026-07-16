@@ -1,4 +1,5 @@
 enum TrainingType {
+  custom,
   hands,
   aerobic,
   mobility,
@@ -11,6 +12,8 @@ enum TrainingType {
   @override
   toString() {
     switch (this) {
+      case TrainingType.custom:
+        return 'PERSONALIZADO';
       case TrainingType.hands:
         return 'MÃOS';
       case TrainingType.feet:
